@@ -1,6 +1,11 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React Movie App:
+- use a real API to search for movies as you type;
+- add movies to and remove them from your favourites;
+- save your favourites to local storage to they appear when the app refreshes.
+
+CinemaApp is a React-based movie website that allows users to search for movies by title and bookmark their favorite movies. The website is designed to be user-friendly and visually appealing. Search and view details of chosen movies
 
 Currently, two official plugins are available:
 
