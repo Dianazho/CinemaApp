@@ -1,0 +1,415 @@
+:root {
+  --color-primary: #7ee9ff;
+  --color-primary-dark: #02385e;
+
+  --color-text: #dee2e6;
+  --color-text-dark: #adb5bd;
+  --color-background-100: #343a40;
+  --color-background-500: #2b3035;
+  --color-background-body: #212529;
+
+  --color-red: #fa5252;
+  --color-red-dark: #e03131;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  padding: 3.2rem;
+  background-color: #212529;
+  color: #dee2e6;
+}
+
+.loading,
+.cta {
+  background: #2b3035;
+  padding: 1.6rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ************************************** */
+/* NAV BAR */
+/* ************************************** */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.2rem;
+  background: radial-gradient(
+    circle,
+    #7ee9ff 0%,
+    #5ca9df 42%,
+    #005896 75%,
+    #02385e 100%
+  );
+  border-radius: 4px;
+  margin-bottom: 2.4rem;
+  font-size: 1.8rem;
+  height: 7.4rem;
+}
+
+.search-item {
+  min-width: 35rem;
+  max-width: 55rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 4px;
+  border: none;
+  background: #f6fdff;
+}
+
+/* ************************************** */
+/* BODY */
+/* ************************************** */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.2rem;
+  height: calc(100vh - 16.2rem);
+}
+
+/* ************************************** */
+/* LEFT COLUMN */
+/* ************************************** */
+
+.left-col {
+  display: flex;
+  /* max-width: 50rem;
+  justify-self: end;
+  width: 60rem; */
+  overflow: scroll;
+}
+
+.movie-list {
+  background: #2b3035;
+  border-radius: 4px;
+  overflow: scroll;
+  width: 100%;
+}
+
+.movie-poster,
+.movie-poster-watched {
+  width: 6.4rem;
+  height: auto;
+}
+
+.movie-item {
+  list-style: none;
+  padding: 1.6rem;
+  display: flex;
+  gap: 1.2rem;
+  border-bottom: 2px solid #343a40;
+}
+
+.movie-item:hover {
+  background: #343a40;
+}
+
+.movie-info-div {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  margin: 0.8rem;
+}
+
+.movie-title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+/* ************************************** */
+/* RIGHT COLUMN */
+/* ************************************** */
+
+.watched-header {
+  padding-left: 1.6rem;
+  height: 12.8rem;
+  background: #212529;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  height: 3.6rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  background-color: #2b3035;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 999;
+  top: 1rem;
+}
+
+.button:hover {
+  background-color: #5ca9df;
+}
+
+.button-right {
+  right: 1rem;
+}
+
+.button-left {
+  left: 1rem;
+}
+
+.watched-movie-div {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.movie-details {
+  display: flex;
+  gap: 2.4rem;
+  margin-top: 0.8rem;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.button-delete {
+  background: #e03131;
+  height: 3.6rem;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+  align-self: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+}
+
+.button-delete:hover {
+  background: #fa5252;
+}
+
+.movie-details-div {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+  justify-content: center;
+  align-items: flex-start;
+  background: #2b3035;
+  position: relative;
+}
+
+.movie-main-info-div {
+  display: flex;
+  gap: 2.4rem;
+  margin-bottom: 3.2rem;
+  margin-left: 1.4rem;
+}
+
+.movie-main-info-div > img {
+  width: 14rem;
+  height: auto;
+}
+
+.movie-details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+}
+
+.button-add {
+  padding: 1.2rem 1.6rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #7ee9ff;
+  display: inline;
+  margin-top: 1.2rem;
+}
+
+.button-add:hover {
+  background: #5ca9df;
+}
+
+.movie-details-additional {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.added-to-watch {
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #7ee9ff;
+}
+
+.plot {
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.genre {
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+/* --- 01 TYPOGRAPHY SYSTEM
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+@media (max-width: 75em) /* 1200px */ {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 47em) /* 752px */ {
+  .movie-details-info,
+  .button-add {
+    font-size: 1.2rem;
+  }
+
+  .movie-details-additional {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 41em) /* 656px */ {
+  html {
+    font-size: 50%;
+  }
+
+  .button-add {
+    margin-top: 0.8rem;
+  }
+
+  .search-item {
+    min-width: 25rem;
+    font-size: 1.4rem;
+  }
+
+  .movie-poster {
+    width: 5.2rem;
+    height: auto;
+  }
+
+  .movie-poster-watched {
+    width: 9.2rem;
+    height: auto;
+  }
+
+  .movie-details {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 36em) /* 560px */ {
+  main {
+    gap: 1.4rem;
+  }
+
+  .movie-poster-watched {
+    width: 6.4rem;
+  }
+}
+
+@media (max-width: 32em) /* 512px */ {
+  html {
+    font-size: 48%;
+  }
+
+  .search-item {
+    font-size: 1.2rem;
+  }
+
+  .button,
+  .button-delete {
+    height: 3.2rem;
+  }
+
+  nav {
+    font-size: 1.6rem;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+
+  .movie-poster-watched {
+    width: 18%;
+  }
+
+  .movie-poster {
+    width: 16%;
+  }
+
+  .left-col {
+    height: 30rem;
+  }
+
+  .movie-details {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 28em) {
+  .search-item {
+    min-width: 15rem;
+  }
+
+  .movies-found-counter {
+    display: none;
+    visibility: hidden;
+  }
+
+  .search-item {
+    min-width: 20rem;
+  }
+
+  .movie-poster-watched {
+    width: 20%;
+  }
+}
+
+@media (max-width: 28em) {
+  .movie-poster-watched {
+    width: 30%;
+  }
+}
